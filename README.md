@@ -11,6 +11,11 @@ Your webpack.config.js maybe like this:
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
+	plugins: [
+		new ExtractTextPlugin('style.css', {
+			allChunks: true
+		})
+	],
 	module: {
 		loaders: [
 			{
